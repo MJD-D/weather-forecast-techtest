@@ -8,7 +8,7 @@ export const useForecast =  (city:String, unit: String, timeoutLength = 500) => 
   const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
     
 
-    
+  //the debounce version is to reduce unintended calls to the api while typing a city name  
   const debounceFetchForecast =  () => {
   if (timeoutId) {
     clearTimeout(timeoutId);
@@ -27,7 +27,7 @@ export const useForecast =  (city:String, unit: String, timeoutLength = 500) => 
 
     setTimeoutId(id);
   }
-
+  // this fetch is for when toggling between imperial and metric measurements
   const fetchForecast = async() => {
     try {
       const response = await axios.get(
