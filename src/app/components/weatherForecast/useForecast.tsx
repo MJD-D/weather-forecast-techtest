@@ -9,7 +9,7 @@ export const useForecast =  (city:String, unit: String, timeoutLength = 500) => 
     
 
     
-  const fetchForecast =  useCallback(() => {
+  const fetchForecast =  () => {
   if (timeoutId) {
     clearTimeout(timeoutId);
   }
@@ -27,7 +27,6 @@ export const useForecast =  (city:String, unit: String, timeoutLength = 500) => 
 
     setTimeoutId(id);
   }
-  ,[timeoutLength, setTimeoutId, setForecastData])
 
   useEffect(() => {
     fetchForecast();
@@ -36,7 +35,7 @@ export const useForecast =  (city:String, unit: String, timeoutLength = 500) => 
         clearTimeout(timeoutId);
       }
     }
-  }, [fetchForecast,city,unit]);
+  }, [city,unit]);
 
   return {forecastData};
   };
