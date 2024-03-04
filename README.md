@@ -1,3 +1,5 @@
+this web app is hosted at https://mjd-d.github.io/weather-forecast-techtest/
+
 INSTALL AND RUN INSTRUCTIONS, 
 
 firstly navigate to the directory where you have installed the app and run "npm install" to ensure all dependencies are installed,
