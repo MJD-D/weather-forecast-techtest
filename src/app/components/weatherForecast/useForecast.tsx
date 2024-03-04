@@ -23,11 +23,11 @@ export const useForecast =  (city:String, unit: String, timeoutLength = 500) => 
       } catch (error) {
         console.error('Error fetching data: ', error);
       }
-    }, timeoutLength);
+    }, timeoutLength)
 
     setTimeoutId(id);
   }
-  ,[timeoutLength,timeoutId,setTimeoutId, setForecastData])
+  ,[timeoutLength, setTimeoutId, setForecastData])
 
   useEffect(() => {
     fetchForecast();
