@@ -9,7 +9,7 @@ export const useForecast =  (city:String, unit: String, timeoutLength = 500) => 
     
 
     
-  const fetchForecast =  () => {
+  const debounceFetchForecast =  () => {
   if (timeoutId) {
     clearTimeout(timeoutId);
   }
@@ -28,14 +28,30 @@ export const useForecast =  (city:String, unit: String, timeoutLength = 500) => 
     setTimeoutId(id);
   }
 
+  const fetchForecast = async() => {
+    try {
+      const response = await axios.get(
+        `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=62cbc9de2249a2cfdab33873db7fba5c&units=${unit}`
+      );
+      setForecastData(response.data.list);
+    } catch (error) {
+      console.error('Error fetching data: ', error);
+    }
+  }
+
   useEffect(() => {
-    fetchForecast();
+    debounceFetchForecast();
     return() => {
       if (timeoutId) {
         clearTimeout(timeoutId);
       }
     }
-  }, [city,unit]);
+  }, [city]);
+
+  useEffect(()=>{
+    fetchForecast();
+  }
+  ,[unit])
 
   return {forecastData};
   };
