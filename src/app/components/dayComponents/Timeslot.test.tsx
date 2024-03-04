@@ -13,7 +13,6 @@ const mockTimeslotData = {
 describe('Timeslot', ()=> {
     test('renders Timeslot correctly', async () => {
         render(<Timeslot {...mockTimeslotData}/>);
-        screen.debug()
         expect(screen.getByAltText("light rain")).toBeVisible();
         expect(screen.getByText("Weather: light rain")).toBeVisible();
         expect(screen.getByText("Temperature: 7.48 °C")).toBeVisible();

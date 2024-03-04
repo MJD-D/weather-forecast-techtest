@@ -44,7 +44,6 @@ const mockTimeslotData =
 describe('Day', ()=> {
     test('renders days correctly', async () => {
         render(<Day day={mockDay} data={mockTimeslotData} unitSymbol="°C"/>);
-        screen.debug()
         expect(screen.getByText("Tue Mar 05 2024")).toBeVisible();
         expect(screen.getByText("High 9.48 °C")).toBeVisible();
         expect(screen.getByText("Low 5.48 °C")).toBeVisible();
