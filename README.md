@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+INSTALL AND RUN INSTRUCTIONS, 
 
-## Getting Started
+firstly run npm install to ensure all dependencies are installed,
 
-First, run the development server:
+now to run the app locally run npm run dev
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+to build the app run npm run build 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+and to run the tests run npm run test
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+DISCUSSION
 
-## Learn More
+if given more time i would like to:
 
-To learn more about Next.js, take a look at the following resources:
+- enhance the visuals in order to improve the user experience as currently its very basic.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- add a section that states the location thats data is currently being displayed including country, which involves expanding from two leter isocode that is provided 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- add  sunrise and sunset itmes, its a nice simple feature that may not be of much use to some but is a nice to have 
 
-## Deploy on Vercel
+- position and label the metric to imperial switch appropriately, possibly rethink the layout in general 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- convert to local timezone for each city, eg showing the time slots for new york in new york time
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- add collapse functionality for each day to show only the the day data rather when collapsed rather than all timeslots, this would help improve the readability on smaller devices such as mobile phones as currently you have to scroll a long way to get to later days in the week.
+
+- add options to search by postcode or longitude and latitude, when showing this to my wife and friends their main request was an ability to search by postcode and since the api supports this its a very worthwhile change 
+
+- add suggested cities using the geolocator api to suggest completions for the location search bar
+
+- increase test coverage to cover all edge cases and add end to end tests
+  
