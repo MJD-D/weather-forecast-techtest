@@ -1,28 +1,40 @@
+.page {
+  background-color: #87CEEB;
+}
 .week {
   display: flex;
-  
+  flex-wrap: wrap;
 }
 .container {
   margin-bottom: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #000;
   padding: 10px;
+  margin: 0 auto;
+  margin: 5px;
+  padding: 10px;
+  width: calc(50% -10px);
 }
   
 .dayContainer {
   display: flex;
   flex-direction: column;
   overflow-x: auto;
+
 }
   
-.day {
+.timeslot {
   flex: 0 0 auto;
-  width: 250px;
-  margin-right: 10px;
-  border: 1px solid #ccc;
-  padding: 10px;
+  margin: 5px;
+  border: 1px solid #000;
+  padding: 4px;
+  
   
 }
-  
+@media screen and (min-width: 600px) {
+  .container {
+    width: calc(16.665% - 10px); /* Make each day occupy one-fifth of the width for larger screens */
+  }
+}
 .icon {
   background-color: #87CEEB;
 }
