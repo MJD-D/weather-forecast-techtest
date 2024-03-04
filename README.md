@@ -1,12 +1,12 @@
 INSTALL AND RUN INSTRUCTIONS, 
 
-firstly run npm install to ensure all dependencies are installed,
+firstly navigate to the directory where you have installed the app and run "npm install" to ensure all dependencies are installed,
 
-now to run the app locally run npm run dev
+now to run the app locally run "npm run dev" this will load at [localhost](http://localhost:3000/)
 
-to build the app run npm run build 
+to build the app run "npm run build" 
 
-and to run the tests run npm run test
+and to run the tests run "npm run test"
 
 
 DISCUSSION
